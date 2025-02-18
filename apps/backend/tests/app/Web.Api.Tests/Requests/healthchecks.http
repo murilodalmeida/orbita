@@ -1,0 +1,11 @@
+@ResourceUrl = https://localhost:5001/health
+
+GET {{ResourceUrl}}/live
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET {{ResourceUrl}}/ready
+Accept: application/json
+Content-Type: application/json

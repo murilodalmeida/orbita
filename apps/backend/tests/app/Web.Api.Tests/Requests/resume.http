@@ -1,0 +1,33 @@
+@ResourceUrl = https://localhost:5001/v1/resume
+@DbType = lite
+
+POST {{ResourceUrl}}
+Accept: application/json
+Content-Type: application/json
+X-DbType: {{DbType}}
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "jobTitle": "Software Developer",
+  "companyName": "Acme Inc.",
+  "email": "johndoe@domain.com",
+  "phoneNumber": "+1234567890",
+  "city": "New York",
+  "state": "NY",
+  "country": "USA"
+}
+###
+
+GET {{ResourceUrl}}/john-doe-6fae45b
+Content-Type: application/json
+X-DbType: {{DbType}}
+
+###
+
+PATCH {{ResourceUrl}}/0194d61c-9323-7c29-88fa-c99931ad26d7/handle
+Content-Type: application/json 
+
+{
+  "handle": "johndoe"
+}

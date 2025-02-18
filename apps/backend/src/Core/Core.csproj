@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <AssemblyName>FwksLabs.Orbita.Core</AssemblyName>
+        <RootNamespace>FwksLabs.Orbita.Core</RootNamespace>
+        <ImplicitUsings>false</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.11.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\libs\Libs.Core\Libs.Core.csproj" />
+        <ProjectReference Include="..\..\libs\Libs.Infra.Postgres\Libs.Infra.Postgres.csproj" />
+        <ProjectReference Include="..\..\libs\Libs.Serilog\Libs.Serilog.csproj" />
+    </ItemGroup>
+
+</Project>

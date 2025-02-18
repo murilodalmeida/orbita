@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <AssemblyName>FwksLabs.Libs.Infra.Mongo</AssemblyName>
+        <RootNamespace>FwksLabs.Libs.Infra.Mongo</RootNamespace>
+        <ImplicitUsings>false</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="9.0.1" />
+        <PackageReference Include="MongoDB.Driver" Version="3.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Libs.Core\Libs.Core.csproj" />
+    </ItemGroup>
+
+</Project>

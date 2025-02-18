@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <AssemblyName>FwksLabs.Libs.AspNetCore</AssemblyName>
+        <RootNamespace>FwksLabs.Libs.AspNetCore</RootNamespace>
+        <ImplicitUsings>false</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Http" Version="8.1.0" />
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+        <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Libs.Core\Libs.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Settings\" />
+    </ItemGroup>
+
+</Project>

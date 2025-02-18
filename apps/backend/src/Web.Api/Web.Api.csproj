@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <AssemblyName>FwksLabs.Orbita.Web.Api</AssemblyName>
+        <RootNamespace>FwksLabs.Orbita.Web.Api</RootNamespace>
+        <ImplicitUsings>false</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Http" Version="8.1.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+        <PackageReference Include="Scalar.AspNetCore" Version="2.0.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\libs\Libs.AspNetCore\Libs.AspNetCore.csproj" />
+        <ProjectReference Include="..\..\libs\Libs.Infra.LiteDb\Libs.Infra.LiteDb.csproj" />
+        <ProjectReference Include="..\..\libs\Libs.Infra.Mongo\Libs.Infra.Mongo.csproj" />
+        <ProjectReference Include="..\..\libs\Libs.Infra.Postgres\Libs.Infra.Postgres.csproj" />
+        <ProjectReference Include="..\..\libs\Libs.Telemetry\Libs.Telemetry.csproj" />
+        <ProjectReference Include="..\Core\Core.csproj" />
+        <ProjectReference Include="..\Infra\Infra.csproj" />
+    </ItemGroup>
+
+</Project>
