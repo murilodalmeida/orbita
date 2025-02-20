@@ -5,6 +5,7 @@ using LiteDB;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace FwksLabs.Libs.Infra.LiteDb.HealthCheck.Extensions;
+
 public static class LiteDbHealthCheckBuilderExtension
 {
     public static IServiceCollection AddLiteDbHealthCheck(this IServiceCollection services, string connectionString, string? name = default, int timeoutInSeconds = 10, IEnumerable<string>? tags = default)

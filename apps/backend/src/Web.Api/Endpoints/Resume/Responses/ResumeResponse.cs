@@ -5,6 +5,7 @@ using FwksLabs.Orbita.Core.Entities;
 using FwksLabs.Orbita.Core.ValueObjects;
 
 namespace FwksLabs.Orbita.Web.Api.Endpoints.Resume.Responses;
+
 public record ResumeResponse(
     Guid Id,
     string Handle,

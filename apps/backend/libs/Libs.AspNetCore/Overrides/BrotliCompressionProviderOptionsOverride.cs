@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace FwksLabs.Libs.AspNetCore.Overrides;
+
 public class BrotliCompressionProviderOptionsOverride(
     ILogger<BrotliCompressionProviderOptionsOverride> logger) : IConfigureOptions<BrotliCompressionProviderOptions>
 {

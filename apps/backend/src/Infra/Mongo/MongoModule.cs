@@ -1,8 +1,8 @@
 ﻿using FwksLabs.Libs.Core.Extensions;
 using FwksLabs.Libs.Infra.Mongo.Abstractions;
-using FwksLabs.Orbita.Infra.Mongo.Contexts;
 using FwksLabs.Orbita.Core.Configuration.Settings;
 using FwksLabs.Orbita.Infra.Mongo.Abstractions;
+using FwksLabs.Orbita.Infra.Mongo.Contexts;
 using Humanizer;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson;

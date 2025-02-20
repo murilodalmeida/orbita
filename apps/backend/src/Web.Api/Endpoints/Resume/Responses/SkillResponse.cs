@@ -3,6 +3,7 @@ using FwksLabs.Orbita.Core.Entities;
 using FwksLabs.Orbita.Core.Enums;
 
 namespace FwksLabs.Orbita.Web.Api.Endpoints.Resume.Responses;
+
 public record SkillResponse(
     Guid Id,
     SkillCategory Category,

@@ -2,6 +2,7 @@ using FluentValidation;
 using FwksLabs.Orbita.Core.ValueObjects;
 
 namespace FwksLabs.Orbita.Core.Entities.Validators;
+
 public sealed class EducationRecordEntityValidator : AbstractValidator<EducationRecordEntity>
 {
     public EducationRecordEntityValidator(

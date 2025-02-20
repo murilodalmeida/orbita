@@ -7,7 +7,7 @@ namespace FwksLabs.Libs.Core.Configuration;
 public static class JsonSerializerOptionsConfiguration
 {
     private static readonly Lock _lock = new();
-    
+
     private static JsonSerializerOptions? _options;
 
     public static JsonSerializerOptions Options

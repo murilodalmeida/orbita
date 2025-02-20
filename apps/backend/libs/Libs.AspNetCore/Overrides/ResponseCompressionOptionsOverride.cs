@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace FwksLabs.Libs.AspNetCore.Overrides;
+
 public class ResponseCompressionOptionsOverride(
     ILogger<ResponseCompressionOptionsOverride> logger) : IConfigureOptions<ResponseCompressionOptions>
 {

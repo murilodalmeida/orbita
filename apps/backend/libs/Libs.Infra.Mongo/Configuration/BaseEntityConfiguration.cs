@@ -3,6 +3,7 @@ using FwksLabs.Libs.Core.Types;
 using MongoDB.Bson.Serialization;
 
 namespace FwksLabs.Libs.Infra.Mongo.Configuration;
+
 public abstract class BaseEntityConfiguration<TEntity>
     where TEntity : BaseEntity<Guid>
 {

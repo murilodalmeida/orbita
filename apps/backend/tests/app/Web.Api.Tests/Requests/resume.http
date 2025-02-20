@@ -1,10 +1,12 @@
 @ResourceUrl = https://localhost:5001/v1/resume
 @DbType = lite
+@CorrelationId = ff7963bf-26ca-4f99-a987-34163af00300
 
 POST {{ResourceUrl}}
 Accept: application/json
 Content-Type: application/json
 X-DbType: {{DbType}}
+X-Correlation-Id: {{CorrelationId}}
 
 {
   "firstName": "John",
@@ -22,11 +24,13 @@ X-DbType: {{DbType}}
 GET {{ResourceUrl}}/john-doe-6fae45b
 Content-Type: application/json
 X-DbType: {{DbType}}
+X-Correlation-Id: {{CorrelationId}}
 
 ###
 
 PATCH {{ResourceUrl}}/0194d61c-9323-7c29-88fa-c99931ad26d7/handle
-Content-Type: application/json 
+Content-Type: application/json
+X-Correlation-Id: {{CorrelationId}}
 
 {
   "handle": "johndoe"

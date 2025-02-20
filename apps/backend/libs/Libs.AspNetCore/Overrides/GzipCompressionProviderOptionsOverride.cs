@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace FwksLabs.Libs.AspNetCore.Overrides;
+
 public class GzipCompressionProviderOptionsOverride(
     ILogger<GzipCompressionProviderOptionsOverride> logger) : IConfigureOptions<GzipCompressionProviderOptions>
 {

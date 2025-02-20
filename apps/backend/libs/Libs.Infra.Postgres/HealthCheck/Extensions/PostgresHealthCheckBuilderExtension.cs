@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
 
 namespace FwksLabs.Libs.Infra.Postgres.HealthCheck.Extensions;
+
 public static class PostgresHealthCheckBuilderExtension
 {
     public static IServiceCollection AddPostgresHealthCheck(this IServiceCollection services, string connectionString, string databaseName = "postgres", string? name = default, int timeoutInSeconds = 10, IEnumerable<string>? tags = default)

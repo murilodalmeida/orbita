@@ -30,4 +30,3 @@ internal sealed class UpdateResumeOverviewEndpoint : IEndpoint
         return AppResponses.NoContent();
     }
 }
-

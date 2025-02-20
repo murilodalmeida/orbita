@@ -20,6 +20,7 @@ public sealed record AppSettings(
     public bool IsDevelopment { get; set; }
 }
 
+
 //"Logging": {
 //            "Endpoint": "http://localhost:3100",
 //            "Labels": {},

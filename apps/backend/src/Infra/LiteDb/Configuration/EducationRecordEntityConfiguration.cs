@@ -4,6 +4,7 @@ using FwksLabs.Orbita.Core.Entities;
 using LiteDB;
 
 namespace FwksLabs.Orbita.Infra.LiteDb.Configuration;
+
 public sealed class EducationRecordEntityConfiguration : BaseEntityConfiguration<EducationRecordEntity>, ITypeConfiguration
 {
     public override void Extend(EntityBuilder<EducationRecordEntity> mapper)

@@ -24,6 +24,8 @@ try
         .ConfigureHealthChecks(appSettings)
         .ConfigureTelemetry(appSettings)
         .Services
+        .AddLogging()
+        .AddSerilog()
         .AddSingleton(appSettings)
         .AddOpenApi()
         .AddCors()
@@ -55,11 +57,11 @@ try
     }
 
     app
+        .UseRequestTracingMiddleware()
         .UseSerilogRequestLogging()
         .UseHttpsRedirection()
         .UseCors()
         .UseResponseCompression()
-        .UseRequestTracingMiddleware()
         .UseExceptionHandlerService()
         .UseHealthCheckEndpoints();
 
@@ -71,17 +73,23 @@ try
 
     AppSettings GetAppSettings()
     {
-        var settings = builder.Configuration.Get<AppSettings>()
-            ?? throw new InvalidOperationException("AppSettings configuration is missing.");
+        try
+        {
+            var settings = builder.Configuration.Get<AppSettings>()!;
 
-        settings.IsDevelopment = builder.Environment.IsDevelopment();
+            settings.IsDevelopment = builder.Environment.IsDevelopment();
 
-        return settings;
+            return settings;
+        }
+        catch (Exception e)
+        {
+            throw new InvalidOperationException("AppSettings configuration is missing.", e);
+        }
     }
 }
 catch (Exception e)
 {
-    Log.Logger.Fatal(e.Message);
+    Log.Logger.Fatal(e, "App shutdown unexpectedly.");
 }
 finally
 {

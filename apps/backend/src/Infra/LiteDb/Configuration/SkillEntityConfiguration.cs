@@ -4,6 +4,7 @@ using FwksLabs.Orbita.Core.Entities;
 using LiteDB;
 
 namespace FwksLabs.Orbita.Infra.LiteDb.Configuration;
+
 public sealed class SkillEntityConfiguration : BaseEntityConfiguration<SkillEntity>, ITypeConfiguration
 {
     public override void Extend(EntityBuilder<SkillEntity> mapper)

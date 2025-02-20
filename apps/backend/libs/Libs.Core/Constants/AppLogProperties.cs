@@ -2,6 +2,6 @@
 
 public static class AppLogProperties
 {
-    public const string ServiceName = "service_name";
-    public const string ServiceNamespace = "service_namespace";
+    public const string ServiceName = "ServiceName";
+    public const string ServiceNamespace = "ServiceNamespace";
 }

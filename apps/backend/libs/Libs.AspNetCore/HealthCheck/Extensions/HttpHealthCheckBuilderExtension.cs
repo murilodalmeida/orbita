@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace FwksLabs.Libs.AspNetCore.HealthCheck.Extensions;
+
 public static class HttpHealthCheckBuilderExtension
 {
     public static IServiceCollection AddHttpServicesHealthCheck(this IServiceCollection services, IDictionary<string, HttpServiceDependencySettings> httpServices)

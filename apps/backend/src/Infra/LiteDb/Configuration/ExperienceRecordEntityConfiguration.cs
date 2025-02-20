@@ -4,6 +4,7 @@ using FwksLabs.Orbita.Core.Entities;
 using LiteDB;
 
 namespace FwksLabs.Orbita.Infra.LiteDb.Configuration;
+
 public sealed class ExperienceRecordEntityConfiguration : BaseEntityConfiguration<ExperienceRecordEntity>, ITypeConfiguration
 {
     public override void Extend(EntityBuilder<ExperienceRecordEntity> mapper)

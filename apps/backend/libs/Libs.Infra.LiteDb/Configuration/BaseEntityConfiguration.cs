@@ -3,6 +3,7 @@ using FwksLabs.Libs.Core.Types;
 using LiteDB;
 
 namespace FwksLabs.Libs.Infra.LiteDb.Configuration;
+
 public class BaseEntityConfiguration<TEntity>
     where TEntity : BaseEntity<Guid>
 {

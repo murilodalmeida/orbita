@@ -4,6 +4,7 @@ using FwksLabs.Orbita.Core.Enums;
 using FwksLabs.Orbita.Core.ValueObjects;
 
 namespace FwksLabs.Orbita.Web.Api.Endpoints.Resume.Responses;
+
 public record EducationRecordResponse(
     Guid Id,
     EducationCategory Category,

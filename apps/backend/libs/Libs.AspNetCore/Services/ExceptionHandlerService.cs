@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
 namespace FwksLabs.Libs.AspNetCore.Services;
+
 public sealed class ExceptionHandlerService(
     ILogger<ExceptionHandlerService> logger,
     IRequestContext requestContext) : IExceptionHandlerService

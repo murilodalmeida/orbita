@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.Json;
 using Microsoft.Extensions.Options;
 
 namespace FwksLabs.Libs.AspNetCore.Overrides;
+
 public sealed class JsonOptionsOverride : IConfigureOptions<JsonOptions>
 {
     public void Configure(JsonOptions options)

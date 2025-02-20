@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 
 namespace FwksLabs.Libs.Infra.Mongo.HealthCheck.Extensions;
+
 public static class MongoHealthCheckBuilderExtension
 {
     public static IServiceCollection AddMongoHealthCheck(this IServiceCollection services, string connectionString, string? name = default, int timeoutInSeconds = 10, IEnumerable<string>? tags = default)

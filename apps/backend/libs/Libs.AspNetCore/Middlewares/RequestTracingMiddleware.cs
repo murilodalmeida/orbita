@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FwksLabs.Libs.Core.Abstractions.Contexts;
 using FwksLabs.Libs.Core.Constants;
 using Microsoft.AspNetCore.Http;
+using Serilog.Context;
 
 namespace FwksLabs.Libs.AspNetCore.Middlewares;
 
@@ -28,6 +29,9 @@ public sealed class RequestTracingMiddleware(
             return Task.CompletedTask;
         });
 
-        await next(context);
+        using (LogContext.PushProperty(nameof(AppHeaders.CorrelationId), correlationId))
+        {
+            await next(context);
+        }
     }
 }

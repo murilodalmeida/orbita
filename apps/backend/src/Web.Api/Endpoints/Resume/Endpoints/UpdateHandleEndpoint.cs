@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation;
 using FwksLabs.Libs.AspNetCore.Abstractions;
 using FwksLabs.Libs.AspNetCore.Constants;
+using FwksLabs.Orbita.Core.Logs;
 using FwksLabs.Orbita.Infra.LiteDb.Abstractions;
 using FwksLabs.Orbita.Web.Api.Endpoints.Resume.Requests;
 using Microsoft.AspNetCore.Builder;
@@ -26,22 +28,23 @@ internal sealed class UpdateHandleEndpoint : IEndpoint
         [FromBody] UpdateHandleRequest request,
         [FromServices] IValidator<UpdateHandleRequest> validator,
         [FromServices] IDatabaseContext context,
-        [FromServices] ILoggerFactory loggerFactory,
+        [FromServices] ILogger<UpdateHandleEndpoint> logger,
+        [FromServices] ActivitySource activitySource,
         CancellationToken cancellationToken)
     {
-        var logger = loggerFactory.CreateLogger<UpdateHandleEndpoint>();
+        using var activity = activitySource.StartActivity("Patch Resume Handle", ActivityKind.Internal);
 
         var result = await validator.ValidateAsync(request, cancellationToken);
         if (result.IsValid is false)
         {
-            logger.LogError("Failed to update the handle.");
+            logger.InvalidHandle(request.Handle);
             return AppResponses.ValidationErrors(result);
         }
 
         var resume = context.Resumes.FindById(id);
         if (resume is null)
         {
-            logger.LogError("Failed to update the handle.");
+            logger.InvalidHandle(request.Handle);
             return AppResponses.NotFound();
         }
 
@@ -52,4 +55,3 @@ internal sealed class UpdateHandleEndpoint : IEndpoint
         return AppResponses.NoContent();
     }
 }
-
